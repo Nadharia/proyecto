@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentación Detallada - Cauciones P2P</title>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f9fc;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+        .header {
+            background-color: #0f172a;
+            color: white;
+            padding: 1.5rem 0;
+            border-bottom: 3px solid #6366f1;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        h1 {
+            color: #0f172a;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+        }
+        h2 {
+            color: #1e293b;
+            font-size: 1.8rem;
+            margin-top: 2rem;
+        }
+        h3 {
+            color: #6366f1;
+            font-size: 1.3rem;
+            margin-top: 1.5rem;
+        }
+        p, ul, table {
+            margin-bottom: 1rem;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        th, td {
+            border: 1px solid #cbd5e1;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #e2e8f0;
+            color: #1e293b;
+            font-weight: 600;
+        }
+        .nav-link-back {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: #6366f1;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .nav-link-back:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="nav-link-back" style="color: white; font-weight: 700;">&larr; Volver a la Landing Page</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Documentación del Proyecto: Plataforma FinTech de Cauciones P2P</h1>
+
+        <a href="index.html" class="nav-link-back">&larr; Volver a la Landing Page</a>
+
+        
+        <h2 id="seccion-1">I. Resumen Ejecutivo y Propuesta de Valor</h2>
+        <table>
+            <thead>
+                <tr><th>Aspecto</th><th>Descripción (Texto Comercial)</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Concepto</td><td>Plataforma digital de Peer-to-Peer (P2P) Lending enfocada en operaciones garantizadas (cauciones).</td></tr>
+                <tr><td>Objetivo</td><td>Conectar personas que buscan liquidez inmediata con personas que ofrecen capital.</td></tr>
+                <tr><td>Ventaja Competitiva</td><td>Operación "Sin bancos", lo que resulta en un proceso más rápido y ágil.</td></tr>
+                <tr><td>Propuesta de Valor</td><td>El usuario decide el monto, el plazo y la tasa. Nosotros garantizamos transparencia y agilidad con contratos digitales claros y una comisión competitiva.</td></tr>
+            </tbody>
+        </table>
+
+        <h2 id="seccion-2">II. Modelo de Negocio y Finanzas</h2>
+        
+        <h3>1. Usuarios Objetivo</h3>
+        <ul>
+            <li>Inversores Minoristas: Personas que buscan invertir su capital en algo seguro y rentable.</li>
+            <li>Pymes o Personas: Necesitan liquidez rápida.</li>
+        </ul>
+        
+        <h3>2. Ingresos (Modelo de Comisiones)</h3>
+        <ul>
+            <li>Comisión Fija: 3% por cada caución cerrada.</li>
+            <li>Comisión Extra: Para cauciones urgentes.</li>
+            <li>Servicios Premium: Venta de validación prioritaria y seguros opcionales.</li>
+        </ul>
+        
+        <h3>3. Escalabilidad y Crecimiento</h3>
+        <ul>
+            <li>Etapa 1: Validación en una ciudad o país.</li>
+            <li>Etapa 2: Expansión a nivel regional.</li>
+            <li>Etapa 3: Integrar más métodos de pago y seguros.</li>
+        </ul>
+
+        <h2 id="seccion-3">III. Aspecto Técnico y Arquitectura</h2>
+        
+        <h3>1. Stack Tecnológico</h3>
+        <table>
+            <thead>
+                <tr><th>Componente</th><th>Tecnologías Clave</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Frontend</td><td>React + TypeScript + Tailwind. Next.js opcional para SEO.</td></tr>
+                <tr><td>Backend</td><td>Spring Boot (API REST).</td></tr>
+                <tr><td>Base de Datos</td><td>PostgreSQL (principal) y Redis (para caché de operaciones abiertas).</td></tr>
+                <tr><td>Hosting & Cloud</td><td>AWS (EC2/ECS + RDS + S3). Alternativa: Railway / DigitalOcean.</td></tr>
+            </tbody>
+        </table>
+        
+        <h3>2. Módulos y Funcionalidades Clave</h3>
+        <ul>
+            <li>Usuarios: Registro, login, verificación de identidad (KYC).</li>
+            <li>Ofertas y Demandas: Crear, listar, emparejar.</li>
+            <li>Contratos: Generar documento, almacenar y notificar.</li>
+            <li>Pagos: Integración con pasarela.</li>
+            <li>Comisiones: Cálculo automático en cada operación.</li>
+            <li>Panel Admin: Monitoreo, reportes, control de riesgo.</li>
+        </ul>
+        
+        <h3>3. Integraciones y Seguridad</h3>
+        <ul>
+            <li>Pagos: MercadoPago / Stripe.</li>
+            <li>Legal: Firma digital de contratos (DocuSign o similar).</li>
+            <li>Seguridad: SSL obligatorio, Autenticación JWT + doble factor opcional, Logs y alertas en CloudWatch o ELK.</li>
+        </ul>
+
+        <h2 id="seccion-4">IV. Flujo de Funcionamiento de la Plataforma (Proceso y Tecnología)</h2>
+
+        <h3>A. Ingreso y Verificación</h3>
+        <table>
+            <thead>
+                <tr><th>Etapa</th><th>Proceso con Blockchain</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>1. Registro</td><td>El usuario se registra/inicia sesión (Pantalla de Registro/Login).</td></tr>
+                <tr><td>2. Verificación (KYC)</td><td>La plataforma realiza la verificación de identidad (KYC). El hash de la verificación de identidad se registra en la Blockchain para inmutabilidad del estado de KYC.</td></tr>
+            </tbody>
+        </table>
+
+        <h3>B. Creación y Publicación de la Caución</h3>
+        <table>
+            <thead>
+                <tr><th>Etapa</th><th>Proceso</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>1. Publicación</td><td>El usuario define el monto, la tasa y el plazo (Pantalla de Publicar caución).</td></tr>
+                <tr><td>2. Publicación de Lista</td><td>La caución activa se lista en el Dashboard (usando Redis para velocidad).</td></tr>
+            </tbody>
+        </table>
+
+        <h3>C. Emparejamiento y Formalización (Matching)</h3>
+        <table>
+            <thead>
+                <tr><th>Etapa</th><th>Proceso con Blockchain</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>1. Matching</td><td>El sistema conecta o "empareja" la operación (Pantalla de Matching).</td></tr>
+                <tr><td>2. Contrato Digital</td><td>Se genera el contrato digital. El contrato se convierte en un Smart Contract o su hash se registra en la Blockchain.</td></tr>
+                <tr><td>3. Firma Digital</td><td>Ambas partes firman digitalmente (Integración con DocuSign o similar).</td></tr>
+            </tbody>
+        </table>
+
+        <h3>D. Pago y Cierre de Operación</h3>
+        <table>
+            <thead>
+                <tr><th>Etapa</th><th>Proceso con Blockchain</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>1. Pago</td><td>Se confirma el pago (Integración con MercadoPago / Stripe).</td></tr>
+                <tr><td>2. Comisiones</td><td>El Módulo de Comisiones calcula automáticamente la comisión.</td></tr>
+                <tr><td>3. Registro Final</td><td>La operación se registra como cierre en el Historial. El hash de la transacción final y el estado de cierre se almacenan en la Blockchain para un registro inmutable.</td></tr>
+            </tbody>
+        </table>
+
+        <h3>E. Monitoreo y Mantenimiento</h3>
+        <ul>
+            <li>El equipo utiliza el Panel Admin para monitoreo y reportes.</li>
+            <li>Se mantienen logs y alertas de la infraestructura en CloudWatch o ELK.</li>
+        </ul>
+
+        <h2 id="seccion-5">V. Marco Regulatorio y Legal</h2>
+        
+        <h3>1. Cumplimiento Regulatorio y AML</h3>
+        <ul>
+            <li>Estructura Legal: La plataforma se posiciona como intermediario que conecta partes.</li>
+            <li>AML/KYC: El módulo de Usuarios incluye verificación de identidad (KYC) como pilar inicial para la prevención de lavado de activos.</li>
+            <li>Transparencia: La comisión es clara, un factor que contribuye a la transparencia operativa.</li>
+        </ul>
+        
+        <h3>2. Estructura de Contratos y Legalidad</h3>
+        <ul>
+            <li>Contratos Digitales: La plataforma genera y almacena contratos. La integración con DocuSign o similar garantiza la validez legal de la firma digital.</li>
+            <li>Seguridad Jurídica: El uso de contratos digitales hace el proceso más seguro para los usuarios.</li>
+        </ul>
+
+        <h2 id="seccion-6">VI. Gestión de Riesgos y Mitigación</h2>
+        
+        <h3>1. Evaluación de Riesgo Crediticio</h3>
+        <ul>
+            <li>La verificación de identidad (KYC) es la primera línea de defensa para evaluar el riesgo del solicitante.</li>
+            <li>La naturaleza de la plataforma (cauciones) implica que las operaciones están garantizadas, mitigando el riesgo para el inversor.</li>
+        </ul>
+        
+        <h3>2. Proceso de Default (Impago)</h3>
+        <ul>
+            <li>El Panel Admin es crucial para el control de riesgo, permitiendo identificar y gestionar posibles incumplimientos.</li>
+            <li>La caución (garantía) se activa según los términos definidos en el Contrato Digital.</li>
+        </ul>
+        
+        <h3>3. Control de Riesgo Centralizado</h3>
+        <ul>
+            <li>El Panel Admin centraliza el monitoreo y los reportes, permitiendo la toma de decisiones basada en datos para mitigar el riesgo de forma proactiva.</li>
+        </ul>
+
+        <h2 id="seccion-7">VII. Roles de Administración del Sistema</h2>
+        
+        <h3>1. Administrador de Riesgo y Cumplimiento (Compliance Officer)</h3>
+        <ul>
+            <li>Control de Riesgo: Monitoreo del ratio de default y gestión de los perfiles de alto riesgo (uso del Panel Admin).</li>
+            <li>Monitoreo AML/KYC: Supervisión del proceso de verificación de identidad y cumplimiento regulatorio.</li>
+            <li>Gestión de Impagos: Supervisar la ejecución de la caución según el Contrato Digital.</li>
+        </ul>
+        
+        <h3>2. Administrador de Operaciones y Flujos de Pago (Operations Manager)</h3>
+        <ul>
+            <li>Conciliación de Pagos: Monitoreo de la integración con pasarelas (MercadoPago / Stripe) y desembolso de fondos.</li>
+            <li>Gestión de Comisiones: Auditoría del cálculo automático de comisiones.</li>
+            <li>Supervisión del Matching: Seguimiento de la eficiencia del módulo de emparejamiento.</li>
+        </ul>
+        
+        <h3>3. Administrador de Tecnología (System Administrator)</h3>
+        <ul>
+            <li>Monitoreo de Infraestructura: Supervisar la disponibilidad de AWS y el rendimiento del stack técnico.</li>
+            <li>Seguridad: Gestión de logs y alertas, asegurando la operatividad de SSL y JWT.</li>
+            <li>Mantenimiento: Mantenimiento de bases de datos (PostgreSQL/Redis) y despliegue de actualizaciones.</li>
+        </ul>
+    </div>
+
+    <footer class="header" style="text-align: center; padding: 1rem 0; border-top: 1px solid #6366f1;">
+        <div class="container">
+            <a href="index.html" class="nav-link-back" style="color: white; margin-bottom: 0;">&larr; Volver a la Landing Page</a>
+            <p style="font-size: 0.8rem; margin: 0; margin-top: 0.5rem;">&copy; 2025 Plataforma FinTech de Cauciones P2P.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
